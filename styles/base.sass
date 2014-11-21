@@ -1,0 +1,159 @@
+@import "reset"
+
+@mixin grayscale($value)
+	-webkit-filter: grayscale($value)
+	-moz-filter: grayscale($value)
+	-ms-filter: grayscale($value)
+	-o-filter: grayscale($value)
+	filter: grayscale($value)
+
+$small: 320px
+$large: 1024px
+
+@mixin respond-to($media)
+	@if $media == handhelds
+		@media only screen and (max-width: $small)
+			@content
+	@else if $media == medium-screens
+		@media only screen and (min-width: $small + 1) and (max-width: $large - 1)
+			@content
+	@else if $media == wide-screens
+		@media only screen and (min-width: $large)
+			@content
+
+$heroes: 9
+$highlight: rgb(177, 224, 248)
+
+h2
+	font:
+		size: 2em
+		weight: 700
+	color: rgb(46, 10, 5)
+	text-align: center
+	text-transform: uppercase
+
+body
+	font-family: "Times New Roman", serif
+	width: 100%
+
+	header
+		background: url('../images/bg/hs-wp.jpg') center center no-repeat
+		height: 720px
+
+
+		.bg-top
+			height: 300px
+			padding-top: 420px
+			background-image: url('../images/bg/header-mantle.png')
+			background-position: center bottom
+			background-repeat: no-repeat
+			background-size: inherit
+
+
+	.main-app
+		background: url('../images/bg/body-content-bg.jpg') center top repeat-y
+		padding-bottom: 1.9375em
+
+
+		.wrapper
+			width: 90%
+			margin: 0 auto
+
+
+			.cost-board
+				width: 500px
+				height: 50px
+				margin: 0 auto
+
+
+				input[type="radio"]
+					display: none
+
+					&:checked
+						&+label
+							color: lighten($highlight, 5%)
+							text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 3px 0 4px #fff, -3px 0 4px #fff, 0 3px 4px #fff, 0 -3px 4px #fff, 2px 2px 4px #fff, -2px -2px 4px #fff, 0px 0px 5px $highlight
+
+				label
+					background: url("../images/mana.png") top center no-repeat
+					margin: 5px
+					display: block
+					height: 45px
+					width: 45px
+					line-height: 45px
+					text-align: center
+					font-weight: bolder
+					float: left
+					font:
+						size: 20px
+					color: #ffffff
+					text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px #000
+					cursor: pointer
+
+
+			.heroes-tabs
+				margin-bottom: 0.625em
+
+
+				ul
+					display: table
+					width: 50.4em
+					margin: 0 auto
+
+
+					li
+						display: table-cell
+
+
+						label
+							display: block
+							height: 5em
+							width: 5em
+							margin: 0 0.6em
+							background: url("../images/heroes-icons/heroes-icons-80x80.png") no-repeat
+							cursor: pointer
+							border-radius: 2.5em
+							-webkit-transition: box-shadow 0.5s
+							-moz-transition: box-shadow 0.5s
+							-ms-transition: box-shadow 0.5s
+							-o-transition: box-shadow 0.5s
+							transition: box-shadow 0.5s
+
+							&:hover
+								box-shadow: 0 0 3px 3px $highlight
+
+						@for $i from 1 through $heroes
+							&:nth-child(#{$i})
+								label
+									background-position: -5em*($i - 1) 0
+
+
+					input
+						display: none
+
+						&:checked+label
+							box-shadow: 0 0 3px 3px $highlight
+
+			.cards-box
+				width: 100%
+				padding: 0 0.625em
+
+
+				.card
+					float: left
+					padding: 0 4px
+
+					img
+						width: 123px
+						height: 186px
+
+			.separation-line
+				clear: both
+				padding: 1.25em 0
+
+	footer
+		height: 501px
+		background: url("../images/bg/footer-background.png") top center no-repeat
+		position: relative
+		margin-top: -1.9375em
+		z-index: 3

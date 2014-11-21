@@ -1,0 +1,133 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6,
+p, img, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+footer, header, nav {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ul {
+  list-style: none; }
+
+h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #2e0a05;
+  text-align: center;
+  text-transform: uppercase; }
+
+body {
+  font-family: "Times New Roman", serif;
+  width: 100%; }
+  body header {
+    background: url("../images/bg/hs-wp.jpg") center center no-repeat;
+    height: 720px; }
+    body header .bg-top {
+      height: 300px;
+      padding-top: 420px;
+      background-image: url("../images/bg/header-mantle.png");
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: inherit; }
+  body .main-app {
+    background: url("../images/bg/body-content-bg.jpg") center top repeat-y;
+    padding-bottom: 1.9375em; }
+    body .main-app .wrapper {
+      width: 90%;
+      margin: 0 auto; }
+      body .main-app .wrapper .cost-board {
+        width: 500px;
+        height: 50px;
+        margin: 0 auto; }
+        body .main-app .wrapper .cost-board input[type="radio"] {
+          display: none; }
+          body .main-app .wrapper .cost-board input[type="radio"]:checked + label {
+            color: #c8e9fa;
+            text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 3px 0 4px #fff, -3px 0 4px #fff, 0 3px 4px #fff, 0 -3px 4px #fff, 2px 2px 4px #fff, -2px -2px 4px #fff, 0px 0px 5px #b1e0f8; }
+        body .main-app .wrapper .cost-board label {
+          background: url("../images/mana.png") top center no-repeat;
+          margin: 5px;
+          display: block;
+          height: 45px;
+          width: 45px;
+          line-height: 45px;
+          text-align: center;
+          font-weight: bolder;
+          float: left;
+          font-size: 20px;
+          color: #ffffff;
+          text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px #000;
+          cursor: pointer; }
+      body .main-app .wrapper .heroes-tabs {
+        margin-bottom: 0.625em; }
+        body .main-app .wrapper .heroes-tabs ul {
+          display: table;
+          width: 50.4em;
+          margin: 0 auto; }
+          body .main-app .wrapper .heroes-tabs ul li {
+            display: table-cell; }
+            body .main-app .wrapper .heroes-tabs ul li label {
+              display: block;
+              height: 5em;
+              width: 5em;
+              margin: 0 0.6em;
+              background: url("../images/heroes-icons/heroes-icons-80x80.png") no-repeat;
+              cursor: pointer;
+              border-radius: 2.5em;
+              -webkit-transition: box-shadow 0.5s;
+              -moz-transition: box-shadow 0.5s;
+              -ms-transition: box-shadow 0.5s;
+              -o-transition: box-shadow 0.5s;
+              transition: box-shadow 0.5s; }
+              body .main-app .wrapper .heroes-tabs ul li label:hover {
+                box-shadow: 0 0 3px 3px #b1e0f8; }
+            body .main-app .wrapper .heroes-tabs ul li:nth-child(1) label {
+              background-position: 0em 0; }
+            body .main-app .wrapper .heroes-tabs ul li:nth-child(2) label {
+              background-position: -5em 0; }
+            body .main-app .wrapper .heroes-tabs ul li:nth-child(3) label {
+              background-position: -10em 0; }
+            body .main-app .wrapper .heroes-tabs ul li:nth-child(4) label {
+              background-position: -15em 0; }
+            body .main-app .wrapper .heroes-tabs ul li:nth-child(5) label {
+              background-position: -20em 0; }
+            body .main-app .wrapper .heroes-tabs ul li:nth-child(6) label {
+              background-position: -25em 0; }
+            body .main-app .wrapper .heroes-tabs ul li:nth-child(7) label {
+              background-position: -30em 0; }
+            body .main-app .wrapper .heroes-tabs ul li:nth-child(8) label {
+              background-position: -35em 0; }
+            body .main-app .wrapper .heroes-tabs ul li:nth-child(9) label {
+              background-position: -40em 0; }
+          body .main-app .wrapper .heroes-tabs ul input {
+            display: none; }
+            body .main-app .wrapper .heroes-tabs ul input:checked + label {
+              box-shadow: 0 0 3px 3px #b1e0f8; }
+      body .main-app .wrapper .cards-box {
+        width: 100%;
+        padding: 0 0.625em; }
+        body .main-app .wrapper .cards-box .card {
+          float: left;
+          padding: 0 4px; }
+          body .main-app .wrapper .cards-box .card img {
+            width: 123px;
+            height: 186px; }
+      body .main-app .wrapper .separation-line {
+        clear: both;
+        padding: 1.25em 0; }
+  body footer {
+    height: 501px;
+    background: url("../images/bg/footer-background.png") top center no-repeat;
+    position: relative;
+    margin-top: -1.9375em;
+    z-index: 3; }
+
+/*# sourceMappingURL=base.css.map */
